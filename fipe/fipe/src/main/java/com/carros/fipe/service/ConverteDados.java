@@ -2,6 +2,9 @@ package com.carros.fipe.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.CollectionType;
+
+import java.util.List;
 
 public class ConverteDados implements IConverteDados{
 
@@ -15,9 +18,21 @@ public class ConverteDados implements IConverteDados{
     //dentro do json, embora a anotação @jsonAlias nos prove uma forma
     //de apelidar aquele item no código.
     @Override
-    public <T> T obterDados(String json, Class<T> classe) {
+    public <T> T converterDados(String json, Class<T> classe) {
         try {
             return mapper.readValue(json, classe);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public <T> List<T> obterLista(String json, Class<T> classe) {
+        CollectionType lista = mapper.getTypeFactory()
+                .constructCollectionType(List.class, classe);
+
+        try {
+            return mapper.readValue(json, lista);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
