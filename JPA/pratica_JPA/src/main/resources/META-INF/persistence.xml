@@ -4,12 +4,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
 
-	<persistence-unit name="loja" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="looca" transaction-type="RESOURCE_LOCAL">
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.cj.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/loja"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/looca"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
-			<property name="javax.persistence.jdbc.password" value=""/>
+			<property name="javax.persistence.jdbc.password" value="4#d20+15+1d6"/>
 			
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
 			<property name="hibernate.show_sql" value="true"/>
