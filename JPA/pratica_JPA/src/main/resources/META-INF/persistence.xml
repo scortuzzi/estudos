@@ -10,10 +10,11 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/looca"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value="4#d20+15+1d6"/>
-			
+
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
 			<property name="hibernate.show_sql" value="true"/>
-			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
+
 		</properties>
 	</persistence-unit>
 </persistence>

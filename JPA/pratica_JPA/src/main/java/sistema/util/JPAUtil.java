@@ -1,4 +1,4 @@
-package br.com.alura.loja.util;
+package sistema.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

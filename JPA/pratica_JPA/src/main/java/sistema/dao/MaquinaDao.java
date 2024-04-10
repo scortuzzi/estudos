@@ -1,12 +1,11 @@
-package br.com.alura.loja.dao;
+package sistema.dao;
 
-import br.com.alura.loja.modelo.Maquina;
+import sistema.modelo.Maquina;
 
 import javax.persistence.EntityManager;
 
 public class MaquinaDao {
 
-    //inicializa o EntityManager vazio
     private EntityManager em;
 
     //transoforma ele no EntityManager resgatado pelo JPAUtil

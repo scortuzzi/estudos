@@ -1,11 +1,12 @@
-package br.com.alura.loja.modelo;
+package sistema.modelo;
 
 import javax.persistence.*;
 
 //estes objetos são classes JPA
 //elas são o reflexo de uma entidade no banco de dados
 //no geral, ela representa uma tabela no banco,
-//neste caso, a tabela maquinas"
+//neste caso, a tabela "maquinas",
+//seus atributos representam as colunas de tal tabela.
 
 @Entity
 @Table(name = "maquinas")
@@ -16,10 +17,12 @@ public class Maquina {
     private long id;
     private String SO;
     private String fabricante;
+    private Long memoria;
 
-    public Maquina(String SO, String fabricante) {
+    public Maquina(String SO, String fabricante, Long memoria) {
         this.SO = SO;
         this.fabricante = fabricante;
+        this.memoria = memoria;
     }
 
     public String getSO() {
